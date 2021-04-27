@@ -6,7 +6,7 @@ const { writeFileSync } = require('fs');
 
 function setStage() {
     const content = {}
-    if (process.env.IS_HEROKU === 'true') {
+    if (process.env.AWS_BRANCH === 'main') {
         console.log('prod baby')
         content.stage = 'prod'
     } else {

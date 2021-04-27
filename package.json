@@ -44,7 +44,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "webpack serve",
-    "build": "node scripts/stage.js && webpack",
+    "build": "node scripts/stage.js && npm run compile",
     "compile": "webpack --mode production",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

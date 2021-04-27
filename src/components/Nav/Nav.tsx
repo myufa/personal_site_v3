@@ -5,18 +5,18 @@ import './Nav.scss'
 export const Nav: FC<{page: number}> = ({page}) => {
     return (
         <div className='Nav'>
-            <tspan
+            <span
                 onClick={()=>window.open('/', '_self')}
                 id={page === 0 ? 'selected' : undefined}
-            >Work</tspan> &nbsp;/&nbsp; 
-            <tspan
+            >Work</span> &nbsp;/&nbsp; 
+            <span
                 onClick={()=>window.open('/about/', '_self')}
                 id={page === 1 ? 'selected' : undefined}
-            > About </tspan> &nbsp;/&nbsp;
-            <tspan
+            > About </span> &nbsp;/&nbsp;
+            <span
                 onClick={()=>window.open('/other/', '_self')}
                 id={page === 2 ? 'selected' : undefined}
-            > Other</tspan>
+            > Other</span>
         </div>
     )
 }
