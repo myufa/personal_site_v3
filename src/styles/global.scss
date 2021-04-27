@@ -1,0 +1,8 @@
+$font-prefix: "~@ibm/plex";
+@import 'node_modules/@ibm/plex/scss/ibm-plex.scss';
+
+* {
+    font-family: IBM Plex Mono;
+    @media (max-width: 600px) {
+    }
+}

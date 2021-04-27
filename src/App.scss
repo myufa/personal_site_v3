@@ -1,6 +1,49 @@
+$font-prefix: "~@ibm/plex";
+@import 'node_modules/@ibm/plex/scss/ibm-plex.scss';
+@import 'styles/global.scss';
+
 .App {
     display: grid;
-    text-align: center;
     height: 100%;
+
+    @media (max-width: 600px) {
+        width: auto;
+        height: 100vh;
+        background-color: #FFF7EA;
+        .name {
+            font-family: IBM Plex Mono;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            position: absolute;
+            left: 26px;
+            top: 26px;
+        }  
+        
+        .pageBody {
+            position: absolute;
+            top: 115px;
+            width: 80%;
+            left: 10%;
+            right: 10%;
+        }
+
+        .me {
+            position: absolute;
+            width: 90px;
+            height: 111px;
+            right: 33px;
+            top: 120px;
+            border-radius: 5px;
+        }
+    } 
+
+    @media (min-width: 600px) {
+        .name {
+            font-family: 'Times New Roman', Times, serif;
+            left: 5px;
+            top: 10px;
+        }        
+    }   
 }
     

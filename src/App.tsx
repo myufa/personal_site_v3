@@ -1,16 +1,45 @@
 import React, { Component, FC, useEffect, useState } from "react";
-import { BrowserRouter as Router, Link, Redirect, Route } from "react-router-dom";
+import { Router, Link, Redirect, Route } from "react-router-dom";
 import './App.scss'
-import { Main } from "./pages";
+import { Nav } from "./components/Nav";
+import { About, Other, Work } from "./pages";
+import { history } from "./utils/histroy";
+
+import me from '../public/me.jpg'
 
 const App: FC = () => {
-  const [isAuthed, setIsAuthed] = useState(false)
-  const [loading, setLoading] = useState(true)
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState(0)
+
+  useEffect(()=>{}, [page])
 
   return (
     <div className='App'>
-      hi
+      <div className="name">MICHAEL YUFA</div>
+      <Nav page={page}/>
+      <img 
+        className='me'
+        src={me} 
+        alt="Michael Yufa"
+      />
+      <div className='pageBody'>
+        <Router history={history} >
+          <Route 
+            exact={true} 
+            path='/'
+            render={(props)=><Work setPage={setPage} 
+          />}/>
+          <Route 
+            exact={true} 
+            path='/about/'
+            render={(props)=><About setPage={setPage} 
+          />}/>
+          <Route 
+            exact={true} 
+            path='/other/'
+            render={(props)=><Other setPage={setPage} 
+          />}/>
+        </Router>
+      </div>
     </div>
   )
 }

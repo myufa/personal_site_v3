@@ -1,0 +1,46 @@
+@import '../../../../styles/global.scss';
+
+.WorkItem {
+    @media (max-width: 600px) {
+        position: relative;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* or 26px */
+        text-align: right;
+        background: #C3E9FE;
+        border-radius: 5px;
+        width: 100%;
+        height: 150px;
+        display: flex;
+
+        padding-right: 10px;
+
+        .WorkItemContents {
+            position: absolute;
+            right: 10px;
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            position: absolute;
+            max-height: 140px;
+            left: 42px;
+            top: 14px;
+        }
+
+        .WorkItemTitle {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            font-size: 20px;
+        }
+        .WorkItemSubTitle {
+            position: absolute;
+            right: 35px;
+            top: 54px;
+            font-size: 10px;
+            line-height: 130%; /* or 13px */
+        }
+    }
+}
