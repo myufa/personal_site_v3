@@ -3,7 +3,7 @@ import { WorkItem } from "./components/WorkItem";
 
 import blind_date_demo from '../../../public/blind_date_demo.png'
 import dexter_logo from '../../../public/dexter_logo.png'
-import pearl_logo from '../../../public/pearl_logo.svg'
+import pearl_logo from '../../../public/pearl_logo.png'
 import './Work.scss'
 
 export const Work: FC<{setPage: (v: any) => void}> = ({setPage}) => {
