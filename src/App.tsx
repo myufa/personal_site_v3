@@ -6,6 +6,7 @@ import { About, Other, Work } from "./pages";
 import { history } from "./utils/histroy";
 
 import me from '../public/me.jpg'
+import { Socials } from "./components/Socials";
 
 const App: FC = () => {
   const [page, setPage] = useState(0)
@@ -22,6 +23,7 @@ const App: FC = () => {
           src={me} 
           alt="Michael Yufa"
         />
+        <Socials />
         <div className='pageBody'>
           
             <Route 

@@ -1,0 +1,44 @@
+.Socials {
+    position: relative;
+    display: flexbox;
+    a { 
+        position: absolute;
+        color: none;
+        text-decoration: none;
+    }
+    @media (max-width: 600px) {
+        height: 13px;
+        width: 120px;
+        top: 235px;
+        left: 256px;
+        a {
+            top: 1px;
+            padding: none;
+            margin: none;
+            $size: 11px;
+            width: $size;
+            height: $size;
+            z-index: 9999;
+        }
+        img {
+            $size: 11px;
+            width: $size;
+            height: $size;
+            display: block;
+        }
+        #github {
+            left: 0;
+        }
+        #linkedin {
+            left: 24px;
+        }
+        #twitter {
+            left: 47px;
+        }
+        #email {
+            left: 70px;
+        }
+    }
+    
+
+}
