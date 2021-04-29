@@ -15,7 +15,7 @@ export const Other: FC<{setPage: (v: any) => void}> = ({setPage}) => {
                     <a
                         href={soundcloud_url}
                         target='_blank'
-                    >soundcloud</a>
+                    >soundcloud</a> 
             </p>
         </div>
     )

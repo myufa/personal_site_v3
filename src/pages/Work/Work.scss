@@ -22,6 +22,7 @@ $font-prefix: "~@ibm/plex";
     } 
 
     @media (min-width: 600px) {
+        min-height: 125vh;
         .subHeader {
             font-size: 22px;
             font-style: normal;
@@ -29,7 +30,7 @@ $font-prefix: "~@ibm/plex";
             line-height: 220%; /* or 36px */
             text-align: justify;
             width: 709px;
-            height: 186px;
+            padding: 60px 0 100px 0;
         } 
         .title {
             font-style: normal;

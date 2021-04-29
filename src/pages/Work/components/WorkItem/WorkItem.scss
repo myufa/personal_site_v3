@@ -18,17 +18,34 @@
         margin-top: 15px;
         margin-bottom: 15px;
 
+        &.open {
+            height: 300px;
+        }
+
         .WorkItemContents {
             position: absolute;
             right: 12px;
             width: 100%;
-            height: 100%;
+            height: 145px;
+        }
+
+        .more {
+            position: absolute;
+            height: 20px;
+            width: 94%;
+            left: 3%;
+            bottom: 0;
+            #arrow {
+                width: 48px;
+                height: 12px;
+                left: 42%;
+            }
         }
 
         img {
             position: absolute;
             max-height: 140px;
-            left: 23px;
+            left: 24px;
             top: 14px;
         }
 
@@ -75,6 +92,13 @@
                 height: 46%;
             }
         }
+        &#vibe_mill {
+            background: #FDFEC3;
+            img {
+                top: 27%;
+                height: 46%;
+            }
+        }
     }
 
     @media (min-width: 600px) {
@@ -98,11 +122,29 @@
         //     margin-top: 10px;
         // }
 
+        &.open {
+            height: 330px;
+        }
+
         .WorkItemContents {
             position: absolute;
             right: 30px;
             width: 96%;
-            height: 100%;
+            height: 205px;
+        }
+
+        .more {
+            position: absolute;
+            height: 15px;
+            width: 94%;
+            left: 3%;
+            bottom: 0;
+            border-top: 1px solid rgb(161, 154, 154);
+            #arrow {
+                width: 18px;
+                height: 6px;
+                left: 47%;
+            }
         }
 
         img {
@@ -116,12 +158,12 @@
             position: absolute;
             font-size: 31px;
             text-align: right;
-            top: 60px;
+            top: 55px;
             right: 0;
         }
         .WorkItemSubTitle {
             position: absolute;
-            top: 100px;
+            top: 95px;
             right: 0;
             font-size: 13px;
             text-align: right;
@@ -130,7 +172,7 @@
 
         .WorkItemRoll {
             position: absolute;
-            top: 150px;
+            top: 145px;
             right: 0;
             font-size: 16px;
             text-align: right;
@@ -157,6 +199,13 @@
                 top: 30%;
                 height: 40%;
 
+            }
+        }
+        &#vibe_mill {
+            background: #FDFEC3;
+            img {
+                top: 25%;
+                height: 50%;
             }
         }
     }

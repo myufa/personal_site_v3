@@ -64,6 +64,8 @@ $font-prefix: "~@ibm/plex";
             top: 100px;
             width: 100%;
             background-color: #FFF7EA;
+            padding-bottom: 80px;
+            min-height: 78vh;
         }
         
         .pageBody {
@@ -79,7 +81,7 @@ $font-prefix: "~@ibm/plex";
             width: 143px;
             height: 192px;
             right: 8%;
-            top: 0;
+            top: 30px;
             border-radius: 5px;
             z-index: 999;
         }      

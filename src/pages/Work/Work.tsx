@@ -4,6 +4,7 @@ import { WorkItem } from "./components/WorkItem";
 import blind_date_demo from '../../../public/blind_date_demo.png'
 import dexter_logo from '../../../public/dexter_logo.png'
 import pearl_logo from '../../../public/pearl_logo.png'
+import vibe_mill_logo from '../../../public/mill.svg'
 import './Work.scss'
 
 export const Work: FC<{setPage: (v: any) => void}> = ({setPage}) => {
@@ -35,6 +36,12 @@ export const Work: FC<{setPage: (v: any) => void}> = ({setPage}) => {
                     <div className='WorkItemTitle'>Pearl</div>
                     <div className='WorkItemSubTitle'>Saas AI Job Recruiting</div>
                     <div className='WorkItemRoll'>Full-Stack Software Intern</div>
+                </WorkItem>
+                <WorkItem id="vibe_mill">
+                    <img src={vibe_mill_logo} alt="vibe_mill"/>
+                    <div className='WorkItemTitle'>Vibe Mill</div>
+                    <div className='WorkItemSubTitle'>Spotify Playlist Generator</div>
+                    <div className='WorkItemRoll'>Built It On The Side</div>
                 </WorkItem>
             </div>
         </div>
