@@ -1,7 +1,7 @@
 @import '../../../../styles/global.scss';
 
 .WorkItem {
-    //transition: top 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transition: height 0.55s cubic-bezier(0.645,0.045,0.355,1);
     @media (max-width: 600px) {
         position: relative;
         font-style: normal;
@@ -144,6 +144,9 @@
                 width: 18px;
                 height: 6px;
                 left: 47%;
+            }
+            &:hover {
+                cursor: pointer;
             }
         }
 
