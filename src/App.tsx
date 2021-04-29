@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Link, Redirect, Route } from "react-router-dom
 import './App.scss'
 import { Nav } from "./components/Nav";
 import { About, Other, Work } from "./pages";
-import { history } from "./utils/histroy";
 
 import me from '../public/me.jpg'
 import { Socials } from "./components/Socials";
@@ -13,38 +12,39 @@ const App: FC = () => {
 
   useEffect(()=>{}, [page])
 
-  return (
-    <Router >
-      <div className='App'>
+  return (    
+    <div className='App'>
+      <Router >
         <div className="name">MICHAEL YUFA</div>
         <Nav page={page}/>
-        <img 
-          className='me'
-          src={me} 
-          alt="Michael Yufa"
-        />
-        <Socials />
-        <div className='pageBody'>
-          
-            <Route 
-              exact={true} 
-              path='/'
-              render={(props)=><Work setPage={setPage} 
-            />}/>
-            <Route 
-              exact={true} 
-              path='/about/'
-              render={(props)=><About setPage={setPage} 
-            />}/>
-            <Route 
-              exact={true} 
-              path='/other/'
-              render={(props)=><Other setPage={setPage} 
-            />}/>
-          
+        
+        <div className='pageContainer'>
+          <div className='pageBody'>
+              <img 
+                className='me'
+                src={me} 
+                alt="Michael Yufa"
+              />
+              <Socials />
+              <Route 
+                exact={true} 
+                path='/'
+                render={(props)=><Work setPage={setPage} 
+              />}/>
+              <Route 
+                exact={true} 
+                path='/about/'
+                render={(props)=><About setPage={setPage} 
+              />}/>
+              <Route 
+                exact={true} 
+                path='/other/'
+                render={(props)=><Other setPage={setPage} 
+              />}/>          
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
+    </div>    
   )
 }
 

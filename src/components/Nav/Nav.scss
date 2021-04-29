@@ -22,7 +22,10 @@ $font-prefix: "~@ibm/plex";
     }
 
     @media (min-width: 600px) {
-        font-size: 25px;
+        font-size: 21px;
+        line-height: 19px;
+        right: 15%;
+        top: 20px;
     }
 
     #selected {

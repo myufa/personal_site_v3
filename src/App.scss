@@ -4,7 +4,6 @@ $font-prefix: "~@ibm/plex";
 
 .App {
     display: grid;
-    height: 100%;
 
     @media (max-width: 600px) {
         width: auto;
@@ -19,31 +18,71 @@ $font-prefix: "~@ibm/plex";
             left: 26px;
             top: 26px;
         }  
-        
-        .pageBody {
+
+        .pageContainer {
             position: absolute;
             top: 115px;
+            width: 100%;
+            background-color: #FFF7EA;
+        }
+        
+        .pageBody {
+            position: relative;
             width: 80%;
             left: 10%;
             right: 10%;
+            background-color: #FFF7EA;
         }
 
         .me {
             position: absolute;
             width: 90px;
             height: 111px;
-            right: 33px;
-            top: 120px;
+            right: -4px;
+            top: 0;
             border-radius: 5px;
+            z-index: 999;
         }
     } 
 
     @media (min-width: 600px) {
+        width: auto;
+        height: 100vh;
+        background-color: #FFF7EA;
         .name {
-            font-family: 'Times New Roman', Times, serif;
-            left: 5px;
-            top: 10px;
-        }        
+            font-family: IBM Plex Mono;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            position: absolute;
+            left: 15%;
+            top: 20px;            
+        }  
+
+        .pageContainer {
+            position: absolute;
+            top: 100px;
+            width: 100%;
+            background-color: #FFF7EA;
+        }
+        
+        .pageBody {
+            position: relative;
+            width: 70%;
+            left: 15%;
+            right: 15%;
+            background-color: #FFF7EA;
+        }
+
+        .me {
+            position: absolute;
+            width: 143px;
+            height: 192px;
+            right: 8%;
+            top: 0;
+            border-radius: 5px;
+            z-index: 999;
+        }      
     }   
 }
     

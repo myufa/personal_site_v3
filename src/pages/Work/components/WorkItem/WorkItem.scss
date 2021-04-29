@@ -1,6 +1,7 @@
 @import '../../../../styles/global.scss';
 
 .WorkItem {
+    //transition: top 0.25s cubic-bezier(0.645,0.045,0.355,1);
     @media (max-width: 600px) {
         position: relative;
         font-style: normal;
@@ -27,7 +28,7 @@
         img {
             position: absolute;
             max-height: 140px;
-            left: 18px;
+            left: 23px;
             top: 14px;
         }
 
@@ -54,19 +55,108 @@
         }
 
         &#blind_date {
+            img {
+                top: 10%;
+                height: 80%;
+            }
 
         }   
         &#dexter {
             background: #FED4C3;
             img {
-                top: 35px;
+                top: 22%;
+                height: 56%;
             }
         }
         &#pearl {
             background: #EADAFF;
             img {
-                top: 25%;
+                top: 27%;
+                height: 46%;
+            }
+        }
+    }
+
+    @media (min-width: 600px) {
+        position: relative;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* or 26px */
+        text-align: right;
+        background: #C3E9FE;
+        border-radius: 5px;
+        width: 46%;
+        height: 220px;
+        display: inline-flex;
+        vertical-align: top;
+
+        padding-right: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        // &:hover {
+        //     margin-top: 10px;
+        // }
+
+        .WorkItemContents {
+            position: absolute;
+            right: 30px;
+            width: 96%;
+            height: 100%;
+        }
+
+        img {
+            position: absolute;
+            left: 23px;
+            top: 14px;
+            max-width: 140px;
+        }
+
+        .WorkItemTitle {
+            position: absolute;
+            font-size: 31px;
+            text-align: right;
+            top: 60px;
+            right: 0;
+        }
+        .WorkItemSubTitle {
+            position: absolute;
+            top: 100px;
+            right: 0;
+            font-size: 13px;
+            text-align: right;
+            line-height: 130%; /* or 13px */
+        }
+
+        .WorkItemRoll {
+            position: absolute;
+            top: 150px;
+            right: 0;
+            font-size: 16px;
+            text-align: right;
+            line-height: 130%; /* or 13px */
+        }
+
+        &#blind_date {
+            img {
+                height: 80%;
+                top: 10%
+            }
+        }   
+        &#dexter {
+            background: #FED4C3;
+            img {
                 height: 50%;
+                width: 90px;
+                top: 25%;
+            }
+        }
+        &#pearl {
+            background: #EADAFF;
+            img {
+                top: 30%;
+                height: 40%;
+
             }
         }
     }

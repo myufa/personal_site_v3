@@ -22,10 +22,25 @@ $font-prefix: "~@ibm/plex";
     } 
 
     @media (min-width: 600px) {
-        .name {
-            font-family: 'Times New Roman', Times, serif;
-            left: 5px;
-            top: 10px;
-        }        
+        .subHeader {
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 220%; /* or 36px */
+            text-align: justify;
+            width: 709px;
+            height: 186px;
+        } 
+        .title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            padding-bottom: 20px;
+        }         
+        .WorkItems {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }      
     }   
 }

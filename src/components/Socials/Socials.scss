@@ -1,6 +1,6 @@
 .Socials {
-    position: relative;
-    display: flexbox;
+    position: absolute;
+    display: flex;
     a { 
         position: absolute;
         color: none;
@@ -8,9 +8,9 @@
     }
     @media (max-width: 600px) {
         height: 13px;
-        width: 120px;
-        top: 235px;
-        left: 256px;
+        width: 82px;
+        top: 120px;
+        right: 0px;
         a {
             top: 1px;
             padding: none;
@@ -37,6 +37,41 @@
         }
         #email {
             left: 70px;
+        }
+    }
+
+    @media (min-width: 600px) {
+        position: absolute;
+        height: 120px;
+        width: 36px;
+        top: 5px;
+        right: 4%;
+        $iconSize: 26px;
+        a {
+            left: 1px;
+            padding: none;
+            margin: none;
+            width: $iconSize;
+            height: $iconSize;
+            z-index: 9999;
+        }
+        img {
+            $size: 34px;
+            width: $iconSize;
+            height: $iconSize;
+            display: block;
+        }
+        #github {
+            top: 0;
+        }
+        #linkedin {
+            top: 52px;
+        }
+        #twitter {
+            top: 108px;
+        }
+        #email {
+            top: 160px;
         }
     }
     

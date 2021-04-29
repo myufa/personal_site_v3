@@ -3,9 +3,14 @@ $font-prefix: "~@ibm/plex";
 @import '../../styles/global.scss';
 
 .Other {
+    a {
+        color: #14A4F5;
+        text-decoration: none;
+    }
     @media (max-width: 600px) {
+        position: absolute;
+        top: 90px;
         .title {
-            margin-top: 75px;
             font-style: normal; //
             font-weight: 500;
             font-size: 24px;
@@ -26,10 +31,27 @@ $font-prefix: "~@ibm/plex";
     } 
 
     @media (min-width: 600px) {
-        .name {
-            font-family: 'Times New Roman', Times, serif;
-            left: 5px;
-            top: 10px;
-        }        
+        position: absolute;
+        top: 100px;
+        .title {
+            margin-top: 75px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 217.1%; /* or 50px */
+            text-align: justify;
+        }  
+        
+        .OtherText {
+            font-family: IBM Plex Mono;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 171.1%;
+            width: 78%;
+            /* or 24px */
+
+            text-align: justify;
+        }       
     }  
 }
