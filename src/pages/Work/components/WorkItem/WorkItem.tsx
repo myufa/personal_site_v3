@@ -8,11 +8,23 @@ export const WorkItem: FC<{id?: string}> = (props) => {
     const [open, setOpen] = useState(false)
     const [detailsOpen, setDetailsOpen] = useState(false)
     const myref = useRef<HTMLDivElement>(null);
+    if(myref.current) {
+        myref.current.scrollTop -= 50
+        //myref.current.setAttribute("scrolltop", myref.current.scrollTop - 100)
+    }
+    
     const onMoreClick = (ref: React.MutableRefObject<any>) => () => {
         if (!open) {
-            ref.current.scrollIntoView({
-                behavior: "smooth",
-            });
+            const pageDiff = 160 // window.innerWidth < 600 ? 100 : 160
+            console.log("scroll", window.pageYOffset, myref.current?.offsetTop, pageDiff)
+            if (myref.current && 
+                Math.abs(window.pageYOffset - myref.current.offsetTop) > pageDiff
+            ) {
+                window.scrollTo({
+                    top: myref.current.offsetTop - 35,
+                    behavior: "smooth",
+                });
+            }            
             setTimeout(() => {
                 setDetailsOpen(true);
             }, 500);
@@ -47,7 +59,7 @@ export const WorkItem: FC<{id?: string}> = (props) => {
                 className={open ? 'WorkItemDetails open' :'WorkItemDetails'}
                 hidden={!detailsOpen}
             >
-                hello
+                i did a thing once and it was kinda cool
             </div>
         </div>
     )

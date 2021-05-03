@@ -71,6 +71,32 @@
             line-height: 130%; /* or 13px */
         }
 
+        .WorkItemDetails {
+            position: absolute;
+            //transition: all 8s cubic-bezier(0.645,0.045,0.355,1);
+            font-size: 13px;
+            text-align: left;
+            color: black;
+            opacity: 0;
+            left: 2%;
+            top: 160px;
+            animation-name: fadeInOpacity;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 0.5s;
+            @keyframes fadeInOpacity {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            &.open {
+                opacity: 1;
+            }
+        }
+
         &#blind_date {
             img {
                 top: 10%;
@@ -186,6 +212,7 @@
             position: absolute;
             //transition: all 8s cubic-bezier(0.645,0.045,0.355,1);
             font-size: 13px;
+            text-align: left;
             color: black;
             opacity: 0;
             left: 5%;

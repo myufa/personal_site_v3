@@ -1,5 +1,6 @@
 $font-prefix: "~@ibm/plex";
 @import 'node_modules/@ibm/plex/scss/ibm-plex.scss';
+$globalFont: IBM Plex Mono;
 
 * {
     font-family: IBM Plex Mono;
