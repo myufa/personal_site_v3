@@ -76,12 +76,20 @@ $font-prefix: "~@ibm/plex";
             background-color: #FFF7EA;
         }
 
+        .picAndSocials {
+            position: absolute;
+            right: 4%;
+            top: 30px;
+            height: 200px;
+            width: 200px;
+        }
+
         .me {
             position: absolute;
             width: 143px;
             height: 192px;
-            right: 8%;
-            top: 30px;
+            top: 0;
+            left: 0;
             border-radius: 5px;
             z-index: 999;
         }      

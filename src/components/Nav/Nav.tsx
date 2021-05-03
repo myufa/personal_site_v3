@@ -4,6 +4,7 @@ import { Router, Link, Redirect, Route } from "react-router-dom";
 import './Nav.scss'
 
 export const Nav: FC<{page: number}> = ({page}) => {
+    const resume_link = 'https://github.com/myufa/personal_site_v3/blob/main/public/Michael-Yufa-Resume.pdf'
     return (
         <div className='Nav'>
             <Link

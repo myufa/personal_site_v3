@@ -20,12 +20,15 @@ const App: FC = () => {
         
         <div className='pageContainer'>
           <div className='pageBody'>
-              <img 
-                className='me'
-                src={me} 
-                alt="Michael Yufa"
-              />
-              <Socials />
+              <div className='picAndSocials'>
+                <img 
+                  className='me'
+                  src={me} 
+                  alt="Michael Yufa"
+                />
+                <Socials />
+              </div>
+              
               <Route 
                 exact={true} 
                 path='/'
