@@ -13,10 +13,14 @@ export const Work: FC<{setPage: (v: any) => void}> = ({setPage}) => {
     }, [])
     return (
         <div className='Work'> 
-            <div className='subHeader'>
-            Hi! I build cool things with code! 
-            Check out some of my work below 
+            <div className='subHeader'>                
+                <div >
+                Hi! I build cool things with code!</div>
+                <div >
+                Check out some of my work below</div>
             </div>
+             
+            
             <div className='title'>WORK</div>
             <div className='WorkItems'>
                 <WorkItem id="blind_date">

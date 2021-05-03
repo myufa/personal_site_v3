@@ -17,15 +17,15 @@ $font-prefix: "~@ibm/plex";
     @media (max-width: 600px) {
         font-size: 15px;
         line-height: 19px;
-        right: 30px;
-        top: 53px;
+        right: 3%;
+        top: 30px;
     }
 
     @media (min-width: 600px) {
-        font-size: 21px;
+        font-size: 23px;
         line-height: 19px;
-        right: 15%;
-        top: 20px;
+        right: 5%;
+        top: 25px;
     }
 
     #selected {

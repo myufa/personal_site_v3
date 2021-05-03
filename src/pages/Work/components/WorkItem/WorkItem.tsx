@@ -8,6 +8,14 @@ export const WorkItem: FC<{id?: string}> = (props) => {
     const [open, setOpen] = useState(false)
     const [detailsOpen, setDetailsOpen] = useState(false)
     const myref = useRef<HTMLDivElement>(null);
+    const [presenters, setPresenters] = useState([])
+    const [details, setDetails] = useState([])
+
+    // useEffect(()=>{
+    //     const newPresenters = Array(props.children).filter((child)=>{child.type})
+    // }
+    // , [props.children])
+
     if(myref.current) {
         myref.current.scrollTop -= 50
         //myref.current.setAttribute("scrolltop", myref.current.scrollTop - 100)
