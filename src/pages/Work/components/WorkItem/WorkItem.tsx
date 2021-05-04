@@ -4,17 +4,16 @@ import './WorkItem.scss'
 import arrowUp from '../../../../../public/arrow_up.svg'
 import arrowDown from '../../../../../public/arrow_down.svg'
 
-export const WorkItem: FC<{id?: string}> = (props) => {
+export const WorkItem: FC<{
+    id?: string, 
+    children: JSX.Element[]
+}> = (props) => {
     const [open, setOpen] = useState(false)
     const [detailsOpen, setDetailsOpen] = useState(false)
     const myref = useRef<HTMLDivElement>(null);
-    const [presenters, setPresenters] = useState([])
-    const [details, setDetails] = useState([])
 
-    // useEffect(()=>{
-    //     const newPresenters = Array(props.children).filter((child)=>{child.type})
-    // }
-    // , [props.children])
+    const filterPresenter = (child: JSX.Element) => child.props.className !== 'WorkItemDetail'
+    const filterDetail = (child: JSX.Element) => child.props.className === 'WorkItemDetail'
 
     if(myref.current) {
         myref.current.scrollTop -= 50
@@ -52,7 +51,7 @@ export const WorkItem: FC<{id?: string}> = (props) => {
             id={props.id}
         >
             <div className='WorkItemContents'>
-                {props.children}
+                {props.children.filter(filterPresenter)}
             </div>
             <div 
                 className='more'
@@ -67,7 +66,7 @@ export const WorkItem: FC<{id?: string}> = (props) => {
                 className={open ? 'WorkItemDetails open' :'WorkItemDetails'}
                 hidden={!detailsOpen}
             >
-                i did a thing once and it was kinda cool
+                {props.children.filter(filterDetail)}
             </div>
         </div>
     )

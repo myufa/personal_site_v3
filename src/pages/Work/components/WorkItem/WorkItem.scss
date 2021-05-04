@@ -35,6 +35,7 @@
             width: 94%;
             left: 3%;
             bottom: 0;
+            z-index: 999;
             #arrow {
                 width: 48px;
                 height: 12px;
@@ -79,7 +80,7 @@
             color: black;
             opacity: 0;
             left: 2%;
-            top: 160px;
+            top: 140px;
             animation-name: fadeInOpacity;
             animation-iteration-count: 1;
             animation-timing-function: ease-in;
@@ -94,6 +95,8 @@
             }
             &.open {
                 opacity: 1;
+                height: 130px;
+                overflow-y: scroll;
             }
         }
 
@@ -154,7 +157,7 @@
 
         .WorkItemContents {
             position: absolute;
-            right: 30px;
+            left: 30px;
             width: 96%;
             height: 205px;
         }
@@ -166,6 +169,7 @@
             left: 3%;
             bottom: 0;
             border-top: 1px solid rgb(161, 154, 154);
+            z-index: 999;
             #arrow {
                 width: 18px;
                 height: 6px;
@@ -178,7 +182,7 @@
 
         img {
             position: absolute;
-            left: 23px;
+            right: 23px;
             top: 14px;
             max-width: 140px;
         }
@@ -186,24 +190,24 @@
         .WorkItemTitle {
             position: absolute;
             font-size: 31px;
-            text-align: right;
+            text-align: left;
             top: 55px;
-            right: 0;
+            left: 0;
         }
         .WorkItemSubTitle {
             position: absolute;
             top: 95px;
-            right: 0;
+            left: 0;
             font-size: 13px;
-            text-align: right;
+            text-align: left;
             line-height: 130%; /* or 13px */
         }
 
         .WorkItemRoll {
             position: absolute;
             top: 145px;
-            right: 0;
-            font-size: 16px;
+            left: 0;
+            font-size: 20px;
             text-align: right;
             line-height: 130%; /* or 13px */
         }
@@ -216,7 +220,7 @@
             color: black;
             opacity: 0;
             left: 5%;
-            top: 240px;
+            top: 210px;
             animation-name: fadeInOpacity;
             animation-iteration-count: 1;
             animation-timing-function: ease-in;
@@ -231,6 +235,36 @@
             }
             &.open {
                 opacity: 1;
+                height: 100px;
+                overflow-y: scroll;
+            }
+            &::-webkit-scrollbar-track{
+                -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+                background-color: transparent;
+            }
+        
+            &::-webkit-scrollbar{
+                width: 5px;
+                -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+                background-color: transparent;
+            }
+        
+            &::-webkit-scrollbar-thumb{
+                width: 20px;
+                border-radius: 10px;
+                background-color: #555;
+            }
+        
+            &::-webkit-scrollbar-track::end {
+                background-color: transparent;
+                margin-bottom: 10px; 
+            }
+            
+            &::-webkit-scrollbar-track::start {
+                background-color: transparent;
+                margin-top: 10px;
             }
         }
 
